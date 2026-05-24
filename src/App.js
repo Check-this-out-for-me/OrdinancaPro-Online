@@ -67,7 +67,7 @@ export default function App() {
   };
 
   const hideFromDashboard = (id) => {
-    const updated = appointments.map(a => a.id === id ? { ...a, hiddenFromDashboard: true } : a);
+    const updated = appointments.map(a => a.id === id ? { ...a, hiddenFromDashboard: true, status: 'completed' } : a);
     saveAll(updated);
   };
 
